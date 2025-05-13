@@ -4,10 +4,6 @@
   :root {
     color-scheme: dark;
   }
-
-  * {
-    outline: solid 1px red;
-  }
   @font-face {
     font-family: 'Departure Mono';
     src: url('/fonts/DepartureMono-Regular.woff2') format('woff2'),
