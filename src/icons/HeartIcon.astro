@@ -1,0 +1,33 @@
+---
+type Props = {
+  class?: string
+}
+
+const {
+  class:
+    className = 'w-4 stroke-pixl-light fill-transparent group-hover:stroke-pixl-highlight group-hover:fill-pixl-highlight/50',
+} = Astro.props as Props
+---
+
+<svg
+  aria-label="Heart icon"
+  class={className}
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 14 11"
+  fill="none"
+>
+  <path fill="currentColor" d="M3.116.558H.558v2.559h2.558V.558Zm2.559 0H3.116v2.559h2.559V.558Z"
+  ></path>
+  <path
+    fill="currentColor"
+    d="M5.675 3.116H3.116v2.558h2.559V3.116Zm-2.559 0H.558v2.558h2.558V3.116Zm2.559 2.559H3.116v2.558h2.559V5.675Z"
+  ></path>
+  <path
+    fill="currentColor"
+    d="M8.232 5.675H5.674v2.558h2.558V5.675Zm0-2.559H5.674v2.558h2.558V3.116Zm0 5.118H5.674v2.558h2.558V8.234Zm2.558-2.559H8.233v2.558h2.559V5.675Zm0-2.559H8.233v2.558h2.559V3.116Z"
+  ></path>
+  <path
+    fill="currentColor"
+    d="M10.79.558H8.233v2.559h2.559V.558Zm2.561 2.558h-2.558v2.558h2.558V3.116Z"></path>
+  <path fill="currentColor" d="M13.351.558h-2.558v2.559h2.558V.558Z"></path>
+</svg>

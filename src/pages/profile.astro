@@ -1,0 +1,124 @@
+---
+import AppLayout from '../layouts/AppLayout.astro'
+import FeedItem from '../components/FeedItem.astro'
+---
+
+<AppLayout>
+  <a href="/feed">&larr; back</a>
+
+  <main class="mt-8 overflow-y-auto pb-8">
+    <!-- ----------------------------- -->
+    <!-- Profile header -->
+    <!-- ----------------------------- -->
+    <header>
+      <img src="/images/cover.png" alt="" />
+      <div
+        class="flex flex-col min-[400px]:flex-row gap-4 items-start min-[400px]:items-end -mt-12 md:-mt-16 lg:-mt-24 justify-between"
+      >
+        <div class="flex gap-4 items-end">
+          <img src="/images/adrian.png" class="size-24 md:size-32 lg:size-48 object-cover" alt="" />
+          <div>
+            <h1>_adrian</h1>
+            <p class="text-pixl-light/50">@tudsss</p>
+          </div>
+        </div>
+        <button
+          class="text-pixl-highlight border-pixl-highlight bg-transparent border px-2 py-1 hover:bg-pixl-highlight/10"
+          >Edit Profile</button
+        >
+      </div>
+      <div class="mt-8">
+        <p>
+          I design <a href="#" class="text-pixl-highlight">@Laracasts</a> so hit me up whenever =]
+        </p>
+        <dl class="mt-6 flex flex-wrap gap-x-6 gap-y-4">
+          <div class="flex gap-1">
+            <dt>100</dt>
+            <dd class="text-pixl-light/50">Following</dd>
+          </div>
+          <div class="flex gap-1">
+            <dt>2900</dt>
+            <dd class="text-pixl-light/50">Followers</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- ----------------------------- -->
+    <!-- Tabs -->
+    <!-- ----------------------------- -->
+    <ul class="mt-8 flex flex-wrap gap-6 justify-end">
+      <li><a href="#">Posts</a></li>
+      <li><a href="#" class="text-pixl-light/50 hover:text-pixl-light/75">Replies</a></li>
+      <li><a href="#" class="text-pixl-light/50 hover:text-pixl-light/75">Highlights</a></li>
+      <li>
+        <a href="#" class="text-pixl-light/50 hover:text-pixl-light/75">Inspiration Streams</a>
+      </li>
+    </ul>
+
+    <hr class="border-pixl-light/10 mt-3" />
+
+    <!-- ----------------------------- -->
+    <!-- Feed -->
+    <!-- ----------------------------- -->
+    <ol class="mt-4">
+      <FeedItem name="_adrian" handle="tudssss" timeAgo="2h" image="adrian.png">
+        <p>
+          Love it! <a href="#" class="text-pixl-highlight hover:underline">#audionerds</a>
+          <a href="#" class="text-pixl-highlight hover:underline">#screencasts</a>
+        </p>
+        <div class="border border-pixl-light/10 p-4 mt-4">
+          <div class="flex gap-4 flex-col min-[400px]:flex-row">
+            <a href="/profile" class="shrink-0">
+              <img src="/images/simon-chilling.png" class="size-12 object-cover" alt="" />
+            </a>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <div class="flex gap-x-3 gap-y-2 flex-wrap items-start leading-none">
+                  <h2><a href="/profile">simonswiss</a></h2>
+                  <p class="text-xs text-pixl-light/50">2h</p>
+                  <a href="/profile" class="text-xs text-pixl-light/50 hover:text-pixl-light/75"
+                    >@simonswiss</a
+                  >
+                </div>
+              </div>
+              <div class="text-sm mt-4 flex flex-col gap-4">
+                <p>
+                  I'm pretty stoked with my new Senheiser MKH50 microphone. You can instantly tell
+                  why it's been a staple of the industry for multiple decades.
+                </p>
+                <p>
+                  I know it's a lot of money... but I have a certain passion and obsession for
+                  microphones 😅
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </FeedItem>
+      <FeedItem name="Adelle" timeAgo="2h" image="adelle.png" handle="add-elle">
+        <p>
+          Presumably, if you're watching this series, you've already made the decision to embrace
+          all that Laravel has to offer. However, if you're still on the fence, give me just a
+          moment to sell you on why I believe Laravel is the best framework choice in the PHP world.
+        </p>
+      </FeedItem>
+      <FeedItem reposted handle="mmich_jj" name="Michael" timeAgo="4h30" image="michael.png">
+        <p>
+          I made this! <a class="hover:underline text-pixl-highlight" href="#">#myartwork</a>
+          <a class="hover:underline text-pixl-highlight" href="#">#pixl</a>
+        </p>
+        <img src="/images/simon-chilling.png" alt="" />
+      </FeedItem>
+      <FeedItem handle="mmich_jj" name="Michael" timeAgo="4h30" image="michael.png">
+        <p>
+          I made this! <a class="hover:underline text-pixl-highlight" href="#">#myartwork</a>
+          <a class="hover:underline text-pixl-highlight" href="#">#pixl</a>
+        </p>
+      </FeedItem>
+      <FeedItem name="Adelle" handle="add-elle" timeAgo="2days" image="adelle.png">
+        <p>I love being here, anyone else feel the same?</p>
+      </FeedItem>
+    </ol>
+  </main>
+</AppLayout>

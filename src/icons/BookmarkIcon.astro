@@ -1,0 +1,27 @@
+---
+type Props = {
+  class?: string
+}
+
+const {
+  class:
+    className = 'w-4 stroke-pixl-light fill-transparent group-hover:stroke-pixl-highlight group-hover:fill-pixl-highlight/50',
+} = Astro.props as Props
+---
+
+<svg
+  aria-label="Bookmark icon"
+  class={className}
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 21"
+  fill="none"
+>
+  <path
+    fill="#EEE"
+    d="M4.799 10h-1.5v1.5h1.5V10Zm0 1.5h-1.5V13h1.5v-1.5Zm0 1.5h-1.5v1.5h1.5V13Zm0 1.5h-1.5V16h1.5v-1.5Zm0 1.5h-1.5v1.5h1.5V16Zm1.5 1.5h-1.5V19h1.5v-1.5Zm1.5 0h-1.5V19h1.5v-1.5Zm0-1.5h-1.5v1.5h1.5V16Z"
+  ></path>
+  <path
+    fill="#EEE"
+    d="M9.299 16h-1.5v1.5h1.5V16Zm0-1.5h-1.5V16h1.5v-1.5Zm1.5 0h-1.5V16h1.5v-1.5Zm1.5 0h-1.5V16h1.5v-1.5Zm0 1.5h-1.5v1.5h1.5V16Zm1.5 0h-1.5v1.5h1.5V16Zm1.5 1.5h-1.5V19h1.5v-1.5Zm-1.5 0h-1.5V19h1.5v-1.5Zm3-1.5h-1.5v1.5h1.5V16Zm0-1.5h-1.5V16h1.5v-1.5Zm0-1.5h-1.5v1.5h1.5V13Zm0-1.5h-1.5V13h1.5v-1.5Zm0-1.5h-1.5v1.5h1.5V10Zm-9-7.5h-1.5V4h1.5V2.5Zm1.5 0h-1.5V4h1.5V2.5Zm1.5 0h-1.5V4h1.5V2.5Zm1.5 0h-1.5V4h1.5V2.5Zm1.5 0h-1.5V4h1.5V2.5ZM6.299 4h-1.5v1.5h1.5V4Zm9 0h-1.5v1.5h1.5V4Zm-10.5 1.5h-1.5V7h1.5V5.5Zm1.5 0h-1.5V7h1.5V5.5Zm9 0h-1.5V7h1.5V5.5Zm1.5 0h-1.5V7h1.5V5.5Zm-12 1.5h-1.5v1.5h1.5V7Zm12 0h-1.5v1.5h1.5V7Zm0 1.5h-1.5V10h1.5V8.5Zm-12 0h-1.5V10h1.5V8.5Z"
+  ></path>
+</svg>

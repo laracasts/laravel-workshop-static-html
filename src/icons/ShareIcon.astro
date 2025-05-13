@@ -1,0 +1,49 @@
+---
+type Props = {
+  class?: string
+}
+
+const {
+  class:
+    className = 'w-4 stroke-pixl-light fill-transparent group-hover:stroke-pixl-highlight group-hover:fill-pixl-highlight/50',
+} = Astro.props as Props
+---
+
+<svg
+  aria-label="Share icon"
+  class={className}
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 21"
+  fill="none"
+>
+  <g fill="#EEE" clip-path="url(#a)">
+    <path
+      d="M3.8 8.793H1.997v1.801H3.8V8.793Zm1.8 0H3.8v1.801h1.8V8.793Zm0-1.801H3.8v1.801h1.8V6.992Zm1.801 0H5.6v1.801h1.8V6.992Z"
+    ></path>
+    <path
+      d="M7.401 5.19H5.6v1.802h1.8V5.19Zm1.803 0H7.402v1.802h1.802V5.19Zm0-1.801H7.402V5.19h1.802v-1.8Z"
+    ></path>
+    <path
+      d="M11.005 3.389H9.203V5.19h1.802v-1.8Zm1.802 0h-1.801V5.19h1.801v-1.8Zm1.801 1.801h-1.801v1.802h1.801V5.19Zm-1.801 0h-1.801v1.802h1.801V5.19Zm1.801 1.802h-1.801v1.801h1.801V6.992Z"
+    ></path>
+    <path
+      d="M16.409 6.992h-1.802v1.801h1.802V6.992Zm0 1.801h-1.802v1.801h1.802V8.793Zm1.803 0H16.41v1.801h1.802V8.793ZM11.005 5.19H9.203v1.802h1.802V5.19Z"
+    ></path>
+    <path
+      d="M11.005 6.992H9.203v1.801h1.802V6.992Zm0 1.801H9.203v1.801h1.802V8.793Zm0 1.801H9.203v1.802h1.802v-1.802Zm0 1.802H9.203v1.801h1.802v-1.801Zm0 1.801H9.203V16h1.802v-1.802Z"
+    ></path>
+    <path d="M11.005 15.999H9.203V17.8h1.802V16Zm-5.405 0H3.8V17.8h1.8V16Zm1.801 0H5.6V17.8h1.8V16Z"
+    ></path>
+    <path
+      d="M9.204 15.999H7.402V17.8h1.802V16Zm3.603 0h-1.801V17.8h1.801V16Zm1.801 0h-1.801V17.8h1.801V16Z"
+    ></path>
+    <path d="M16.409 15.999h-1.802V17.8h1.802V16ZM3.8 14.197H1.997V16H3.8v-1.802Z"></path>
+    <path d="M3.8 15.999H1.997V17.8H3.8V16Zm14.412-1.802H16.41V16h1.802v-1.802Z"></path>
+    <path d="M18.212 15.999H16.41V17.8h1.802V16Z"></path>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <path fill="#fff" d="M2 3.389h16.212v14.41H2z"></path>
+    </clipPath>
+  </defs>
+</svg>

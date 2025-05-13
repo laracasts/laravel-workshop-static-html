@@ -1,0 +1,101 @@
+---
+import RepostIcon from '../icons/RepostIcon.astro'
+import HeartIcon from '../icons/HeartIcon.astro'
+import CommentIcon from '../icons/CommentIcon.astro'
+import BookmarkIcon from '../icons/BookmarkIcon.astro'
+import ShareIcon from '../icons/ShareIcon.astro'
+import OptionsMenuButton from './OptionsMenuButton.astro'
+
+type Props = {
+  name: string
+  image: string
+  handle: string
+  timeAgo: string
+  reposted?: boolean
+}
+
+const { name, image, handle, timeAgo, reposted } = Astro.props as Props
+---
+
+<li class="border-b border-pixl-light/10 py-8">
+  <div class="flex flex-col min-[400px]:flex-row gap-4">
+    <a href="/profile" class="shrink-0">
+      <img src={`/images/${image}`} class="size-12 object-cover" alt="" />
+    </a>
+    <div class="flex-1">
+      <div class="flex flex-wrap gap-3 items-center justify-between">
+        <div class="flex flex-wrap gap-x-3 gap-y-2 items-start leading-none">
+          <h2>
+            <a href="/profile">
+              {name}
+            </a>
+          </h2>
+          <p class="text-xs text-pixl-light/50">{timeAgo}</p>
+          <a href="/profile" class="text-sm text-pixl-light/50 hover:text-pixl-light/75"
+            >@{handle}</a
+          >
+        </div>
+        <div class="flex gap-4 items-center">
+          {
+            reposted && (
+              <div class="flex gap-1 items-center">
+                <RepostIcon />
+                <span class="hidden sm:block text-pixl-light/50 text-xs">You Reposted</span>
+              </div>
+            )
+          }
+          <OptionsMenuButton />
+        </div>
+      </div>
+      <div class="text-sm mt-4 flex flex-col gap-3">
+        <slot />
+      </div>
+      <!-- Action buttons -->
+      <div class="mt-6 flex flex-wrap items-center justify-between gap-x-8 gap-y-2">
+        <div class="flex gap-6">
+          <!-- Likes -->
+          <button
+            class="group flex gap-2 items-center text-shadow-pixl-light hover:text-pixl-highlight"
+          >
+            <HeartIcon />
+            <span>23</span>
+          </button>
+
+          <!-- Comments -->
+          <button
+            class="group flex gap-2 items-center text-shadow-pixl-light hover:text-pixl-highlight"
+          >
+            <CommentIcon />
+            <span>23</span>
+          </button>
+
+          <!-- Reposts -->
+          <button
+            class="group flex gap-2 items-center text-shadow-pixl-light hover:text-pixl-highlight"
+          >
+            <RepostIcon />
+            <span>23</span>
+          </button>
+        </div>
+        <div class="flex gap-3">
+          <!-- Save -->
+          <button
+            class="group flex gap-2 items-center text-shadow-pixl-light hover:text-pixl-highlight"
+            aria-label="Save"
+          >
+            <BookmarkIcon />
+            <span class="text-xs text-pixl-light/50">Save</span>
+          </button>
+
+          <!-- Share -->
+          <button
+            class="group flex gap-2 items-center text-shadow-pixl-light hover:text-pixl-highlight"
+            aria-label="Share"
+          >
+            <ShareIcon />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
