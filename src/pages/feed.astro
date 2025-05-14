@@ -22,13 +22,13 @@ import FeedItem from '../components/FeedItem.astro'
     <!-- ----------------------------- -->
     <!-- Post prompt -->
     <!-- ----------------------------- -->
-    <div class="flex gap-4">
+    <div class="flex flex-col min-[400px]:flex-row gap-4 items-start">
       <a href="/profile">
         <img src="/images/adrian.png" class="size-12 object-cover" alt="" />
       </a>
       <div class="flex-1">
         <textarea
-          class="min-h-24 text-lg py-3 w-full bg-pixl-dark text-pixl-highlight placeholder-pixl-light/50 field-sizing-content resize-none"
+          class="-m-2 p-2 min-h-24 text-lg w-full bg-pixl-dark text-pixl-highlight placeholder-pixl-light/50 field-sizing-content resize-none"
           placeholder="What's up _adrian?"></textarea>
         <!-- Action buttons -->
         <div class="flex items-center justify-between">
