@@ -1,33 +1,41 @@
 ---
 type Props = {
   class?: string
+  isLiked?: boolean
 }
 
-const {
-  class:
-    className = 'w-4 stroke-pixl-light fill-transparent group-hover:stroke-pixl-highlight group-hover:fill-pixl-highlight/50',
-} = Astro.props as Props
+const { class: className = '-mt-0.5 size-4', isLiked } = Astro.props as Props
 ---
 
-<svg
-  aria-label="Heart icon"
-  class={className}
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 14 11"
-  fill="none"
+<svg class={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
+  ><path fill="currentColor" d="M6.314 3.73H3.756v2.558h2.558V3.73Z"></path><path
+    fill="currentColor"
+    d="M8.872 3.73H6.313v2.558h2.559V3.73Zm2.558 2.559H8.873v2.558h2.559V6.29Zm2.561-2.559h-2.558v2.558h2.558V3.73Z"
+  ></path><path
+    fill="currentColor"
+    d="M16.547 3.73h-2.559v2.558h2.559V3.73Zm2.558 2.559h-2.558v2.558h2.558V6.29Z"></path><path
+    fill="currentColor"
+    d="M19.105 8.846h-2.558v2.559h2.558V8.846ZM3.756 6.289H1.197v2.558h2.559V6.29Z"></path><path
+    fill="currentColor"
+    d="M3.756 8.846H1.197v2.559h2.559V8.846Z"></path><path
+    fill="currentColor"
+    d="M6.314 11.405H3.756v2.559h2.558v-2.559Zm2.558 2.559H6.313v2.558h2.559v-2.558Zm7.675-2.559h-2.559v2.559h2.559v-2.559Zm-2.556 2.559h-2.558v2.558h2.558v-2.558Zm-2.561 2.558H8.873v2.558h2.559v-2.558Z"
+  ></path><path
+    fill="currentColor"
+    class={isLiked ? 'opacity-30 group-hover:opacity-0' : 'opacity-0'}
+    d="M6.313 6.288H3.755v2.559h2.558V6.288Zm2.559 0H6.313v2.559h2.559V6.288Z"></path><path
+    fill="currentColor"
+    class={isLiked ? 'opacity-30 group-hover:opacity-0' : 'opacity-0'}
+    d="M8.872 8.846H6.313v2.558h2.559V8.846Zm-2.559 0H3.755v2.558h2.558V8.846Zm2.559 2.559H6.313v2.558h2.559v-2.558Z"
+  ></path><path
+    fill="currentColor"
+    class={isLiked ? 'opacity-30 group-hover:opacity-0' : 'opacity-0'}
+    d="M11.43 11.405H8.87v2.558h2.559v-2.558Zm0-2.559H8.87v2.558h2.559V8.846Zm0 5.118H8.87v2.558h2.559v-2.558Zm2.558-2.559H11.43v2.558h2.558v-2.558Zm0-2.559H11.43v2.558h2.558V8.846Z"
+  ></path><path
+    fill="currentColor"
+    class={isLiked ? 'opacity-30 group-hover:opacity-0' : 'opacity-0'}
+    d="M13.988 6.288H11.43v2.559h2.558V6.288Zm2.561 2.558H13.99v2.558h2.559V8.846Z"></path><path
+    fill="currentColor"
+    class={isLiked ? 'opacity-30 group-hover:opacity-0' : 'opacity-0'}
+    d="M16.549 6.288H13.99v2.559h2.559V6.288Z"></path></svg
 >
-  <path fill="currentColor" d="M3.116.558H.558v2.559h2.558V.558Zm2.559 0H3.116v2.559h2.559V.558Z"
-  ></path>
-  <path
-    fill="currentColor"
-    d="M5.675 3.116H3.116v2.558h2.559V3.116Zm-2.559 0H.558v2.558h2.558V3.116Zm2.559 2.559H3.116v2.558h2.559V5.675Z"
-  ></path>
-  <path
-    fill="currentColor"
-    d="M8.232 5.675H5.674v2.558h2.558V5.675Zm0-2.559H5.674v2.558h2.558V3.116Zm0 5.118H5.674v2.558h2.558V8.234Zm2.558-2.559H8.233v2.558h2.559V5.675Zm0-2.559H8.233v2.558h2.559V3.116Z"
-  ></path>
-  <path
-    fill="currentColor"
-    d="M10.79.558H8.233v2.559h2.559V.558Zm2.561 2.558h-2.558v2.558h2.558V3.116Z"></path>
-  <path fill="currentColor" d="M13.351.558h-2.558v2.559h2.558V.558Z"></path>
-</svg>

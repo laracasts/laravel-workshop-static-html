@@ -4,9 +4,22 @@ import FeedItem from '../components/FeedItem.astro'
 ---
 
 <AppLayout>
-  <a href="/feed">&larr; back</a>
+  <a class="group px-4 flex items-center gap-1" href="/feed">
+    <svg class="size-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"
+      ><path
+        fill="currentColor"
+        d="M6.857 0v1.714H5.143V0zM5.143 1.715v1.714H3.429V1.715zM3.427 3.429v1.714H1.713V3.429zM1.715 5.143v1.714H0V5.143zm1.713 1.715v1.714H1.714V6.858zm1.714 1.714v1.714H3.428V8.572zm1.715 1.713V12H5.143v-1.714z"
+      ></path>
+      <path
+        fill="currentColor"
+        class="opacity-50 group-hover:opacity-100"
+        d="M12 0v1.714h-1.714V0zm-1.714 1.714v1.714H8.572V1.714zM8.57 3.428v1.714H6.856V3.428zM6.857 5.143v1.714H5.143V5.143zM8.57 6.858v1.714H6.856V6.858zm1.715 1.714v1.714H8.571V8.572zM12 10.286V12h-1.714v-1.714z"
+      ></path></svg
+    >
+    <span> back </span>
+  </a>
 
-  <main class="mt-8 overflow-y-auto pb-8">
+  <main class="mt-6 overflow-y-auto pb-8 px-4">
     <!-- ----------------------------- -->
     <!-- Profile header -->
     <!-- ----------------------------- -->
@@ -68,14 +81,14 @@ import FeedItem from '../components/FeedItem.astro'
           <a href="#" class="text-pixl-highlight hover:underline">#screencasts</a>
         </p>
         <div class="border border-pixl-light/10 p-4 mt-4">
-          <div class="flex gap-4 flex-col min-[400px]:flex-row">
+          <div class="flex gap-4 flex-col min-[400px]:flex-row items-start">
             <a href="/profile" class="shrink-0">
               <img src="/images/simon-chilling.png" class="size-12 object-cover" alt="" />
             </a>
             <div class="flex-1">
               <div class="flex items-center justify-between">
                 <div class="flex gap-x-3 gap-y-2 flex-wrap items-start leading-none">
-                  <h2><a href="/profile">simonswiss</a></h2>
+                  <h2><a href="/profile" class="hover:underline">simonswiss</a></h2>
                   <p class="text-xs text-pixl-light/50">2h</p>
                   <a href="/profile" class="text-xs text-pixl-light/50 hover:text-pixl-light/75"
                     >@simonswiss</a
@@ -96,7 +109,7 @@ import FeedItem from '../components/FeedItem.astro'
           </div>
         </div>
       </FeedItem>
-      <FeedItem name="Adelle" timeAgo="2h" image="adelle.png" handle="add-elle">
+      <FeedItem name="Adelle" timeAgo="2h" image="adelle.png" handle="add-elle" isLiked>
         <p>
           Presumably, if you're watching this series, you've already made the decision to embrace
           all that Laravel has to offer. However, if you're still on the fence, give me just a

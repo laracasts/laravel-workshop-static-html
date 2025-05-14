@@ -12,13 +12,14 @@ type Props = {
   handle: string
   timeAgo: string
   reposted?: boolean
+  isLiked?: boolean
 }
 
-const { name, image, handle, timeAgo, reposted } = Astro.props as Props
+const { name, image, handle, timeAgo, reposted, isLiked } = Astro.props as Props
 ---
 
 <li class="border-b border-pixl-light/10 py-8">
-  <div class="flex flex-col min-[400px]:flex-row gap-4">
+  <div class="flex flex-col min-[400px]:flex-row gap-4 items-start">
     <a href="/profile" class="shrink-0">
       <img src={`/images/${image}`} class="size-12 object-cover" alt="" />
     </a>
@@ -26,7 +27,7 @@ const { name, image, handle, timeAgo, reposted } = Astro.props as Props
       <div class="flex flex-wrap gap-3 items-center justify-between">
         <div class="flex flex-wrap gap-x-3 gap-y-2 items-start leading-none">
           <h2>
-            <a href="/profile">
+            <a href="/profile" class="hover:underline">
               {name}
             </a>
           </h2>
@@ -54,38 +55,40 @@ const { name, image, handle, timeAgo, reposted } = Astro.props as Props
       <div class="mt-6 flex flex-wrap items-center justify-between gap-x-8 gap-y-2">
         <div class="flex gap-6">
           <!-- Likes -->
-          <button
-            class="group flex gap-2 items-center text-shadow-pixl-light hover:text-pixl-highlight"
-          >
-            <HeartIcon />
+          <div class={`flex gap-2 items-center ${isLiked ? 'text-pixl-highlight' : ''}`}>
+            <button class="group text-shadow-pixl-light hover:text-pixl-highlight">
+              <HeartIcon isLiked={isLiked} />
+            </button>
             <span>23</span>
-          </button>
+          </div>
 
           <!-- Comments -->
-          <button
-            class="group flex gap-2 items-center text-shadow-pixl-light hover:text-pixl-highlight"
-          >
-            <CommentIcon />
+          <div class="flex gap-2 items-center">
+            <button class="group text-shadow-pixl-light hover:text-pixl-highlight">
+              <CommentIcon />
+            </button>
             <span>23</span>
-          </button>
+          </div>
 
           <!-- Reposts -->
-          <button
-            class="group flex gap-2 items-center text-shadow-pixl-light hover:text-pixl-highlight"
-          >
-            <RepostIcon />
+          <div class="flex gap-2 items-center">
+            <button class="group text-shadow-pixl-light hover:text-pixl-highlight">
+              <RepostIcon />
+            </button>
             <span>23</span>
-          </button>
+          </div>
         </div>
         <div class="flex gap-3">
           <!-- Save -->
-          <button
-            class="group flex gap-2 items-center text-shadow-pixl-light hover:text-pixl-highlight"
-            aria-label="Save"
-          >
-            <BookmarkIcon />
+          <div class="flex gap-2 items-center">
+            <button
+              class="group text-shadow-pixl-light hover:text-pixl-highlight"
+              aria-label="Save"
+            >
+              <BookmarkIcon />
+            </button>
             <span class="text-xs text-pixl-light/50">Save</span>
-          </button>
+          </div>
 
           <!-- Share -->
           <button
