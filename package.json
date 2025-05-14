@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "astro": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +19,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.6",
+    "astro": "^5.7.12",
     "tailwindcss": "^4.1.6"
   }
 }

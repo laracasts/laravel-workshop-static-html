@@ -4,6 +4,10 @@
   :root {
     color-scheme: dark;
   }
+
+  *:focus {
+    outline: theme('colors.pixl-highlight') auto 2px;
+  }
   @font-face {
     font-family: 'Departure Mono';
     src: url('/fonts/DepartureMono-Regular.woff2') format('woff2'),

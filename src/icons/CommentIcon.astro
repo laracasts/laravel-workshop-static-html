@@ -1,0 +1,35 @@
+---
+type Props = {
+  class?: string
+}
+
+const {
+  class:
+    className = 'w-4 stroke-pixl-light fill-transparent group-hover:stroke-pixl-highlight group-hover:fill-pixl-highlight/50',
+} = Astro.props as Props
+---
+
+<svg
+  aria-label="Comment icon"
+  class={className}
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 16"
+  fill="none"
+>
+  <path fill="#EEE" d="M4.1 0h1.682v1.682H4.1z"></path>
+  <path
+    fill="#EEE"
+    d="M2.48 0h1.682v1.682H2.48zm0 10.09h1.682v1.682H2.48zM.799 3.363h1.682v1.682H.799z"></path>
+  <path fill="#EEE" d="M.799 1.682h1.682v1.682H.799zm16.754 1.681h1.682v1.682h-1.682z"></path>
+  <path
+    fill="#EEE"
+    d="M17.553 1.682h1.682v1.682h-1.682zM.799 5.044h1.682v1.682H.799zm16.754 0h1.682v1.682h-1.682zM.799 6.726h1.682v1.682H.799zm16.754 0h1.682v1.682h-1.682zM.799 8.408h1.682v1.682H.799zm16.754 0h1.682v1.682h-1.682zM4.16 10.09h1.682v1.682H4.16zm8.348 0h1.682v1.682h-1.682zm-6.664 0h1.682v1.682H5.844zm1.681 1.682h1.682v1.682H7.525zm3.301 0h1.682v1.682h-1.682z"
+  ></path>
+  <path
+    fill="#EEE"
+    d="M9.207 13.452h1.682v1.682H9.207zm0-8.408h1.682v1.682H9.207zm-3.426 0h1.682v1.682H5.781zm6.85 0h1.682v1.682h-1.682zm1.559 5.046h1.682v1.682H14.19zM5.781 0h1.682v1.682H5.781zm1.682 0h1.682v1.682H7.463zm1.683 0h1.682v1.682H9.146z"
+  ></path>
+  <path fill="#EEE" d="M10.826 0h1.682v1.682h-1.682z"></path>
+  <path fill="#EEE" d="M12.508 0h1.682v1.682h-1.682zm1.682 0h1.682v1.682H14.19z"></path>
+  <path fill="#EEE" d="M15.871 0h1.682v1.682h-1.682zm0 10.09h1.682v1.682h-1.682z"></path>
+</svg>

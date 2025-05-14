@@ -1,0 +1,44 @@
+---
+type Props = {
+  class?: string
+}
+
+const {
+  class:
+    className = 'w-4 stroke-pixl-light fill-transparent group-hover:stroke-pixl-highlight group-hover:fill-pixl-highlight/50',
+} = Astro.props as Props
+---
+
+<svg
+  aria-label="Repost icon"
+  class={className}
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 14"
+  fill="none"
+>
+  <path fill="#EEE" d="M1.801 2.72H.441v1.36h1.36V2.72Z"></path>
+  <path
+    fill="#EEE"
+    d="M3.159 2.72h-1.36v1.36h1.36V2.72Zm0-1.36h-1.36v1.36h1.36V1.36Zm1.363 0h-1.36v1.36h1.36V1.36Zm0-1.36h-1.36v1.36h1.36V0Z"
+  ></path>
+  <path
+    fill="#EEE"
+    d="M5.88 0H4.52v1.36h1.36V0Zm1.363 0h-1.36v1.36h1.36V0Zm0 1.36h-1.36v1.36h1.36V1.36Z"></path>
+  <path
+    fill="#EEE"
+    d="M8.6 1.36H7.24v1.36H8.6V1.36Zm0 1.36H7.24v1.36H8.6V2.72Zm1.362 0h-1.36v1.36h1.36V2.72ZM5.88 1.36H4.52v1.36h1.36V1.36Zm0 1.36H4.52v1.36h1.36V2.72Zm0 1.36H4.52v1.36h1.36V4.08Zm0 1.36H4.52V6.8h1.36V5.44Zm0 1.36H4.52v1.36h1.36V6.8Zm1.363 1.36h-1.36v1.36h1.36V8.16Z"
+  ></path>
+  <path
+    fill="#EEE"
+    d="M8.6 8.16H7.24v1.36H8.6V8.16Zm2.72 1.36H9.96v1.36h1.36V9.52Zm1.36 0h-1.36v1.36h1.36V9.52Zm0 1.36h-1.36v1.36h1.36v-1.36Zm1.362 0h-1.36v1.36h1.36v-1.36Zm1.359 1.36h-1.36v1.36h1.36v-1.36Z"
+  ></path>
+  <path
+    fill="#EEE"
+    d="M16.76 12.24H15.4v1.36h1.36v-1.36Zm-2.718 0h-1.36v1.36h1.36v-1.36Zm2.718-1.36H15.4v1.36h1.36v-1.36Zm1.362 0h-1.36v1.36h1.36v-1.36Zm0-1.36h-1.36v1.36h1.36V9.52Z"
+  ></path>
+  <path
+    fill="#EEE"
+    d="M19.481 9.52h-1.36v1.36h1.36V9.52Zm-4.08 1.36h-1.36v1.36h1.36v-1.36Zm0-1.36h-1.36v1.36h1.36V9.52Zm0-1.36h-1.36v1.36h1.36V8.16Zm0-1.36h-1.36v1.36h1.36V6.8Zm0-1.36h-1.36V6.8h1.36V5.44Zm0-1.36h-1.36v1.36h1.36V4.08Z"
+  ></path>
+  <path fill="#EEE" d="M14.042 4.08h-1.36v1.36h1.36V4.08Zm-1.362 0h-1.36v1.36h1.36V4.08Z"></path>
+</svg>

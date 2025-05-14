@@ -1,0 +1,113 @@
+---
+import '../styles.css'
+
+import PixlLogo from '../components/PixlLogo.astro'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIXL</title>
+  </head>
+  <body
+    class="max-w-[1800px] mx-auto relative h-dvh overflow-clip bg-pixl-dark flex py-6 md:px-6 pb-0 gap-16 text-pixl-light justify-end"
+  >
+    <!-- ----------------------------- -->
+    <!-- Left sidebar (header) -->
+    <!-- ----------------------------- -->
+    <header class="hidden sm:flex justify-end md:ml-12 lg:ml-24 xl:ml-32 2xl:ml-48">
+      <div class="w-24 md:w-32">
+        <a href="/" aria-label="PIXL">
+          <PixlLogo />
+        </a>
+        <nav class="mt-12">
+          <ul class="flex flex-col gap-2">
+            <li><a href="#" class="hover:underline">Home</a></li>
+            <li><a href="#" class="hover:underline">Explore</a></li>
+            <li><a href="#" class="hover:underline">Notifications</a></li>
+            <li><a href="#" class="hover:underline">Lists</a></li>
+            <li><a href="#" class="hover:underline">Bookmarks</a></li>
+            <li><a href="#" class="hover:underline">Jobs</a></li>
+            <li><a href="#" class="hover:underline">Communities</a></li>
+            <li><a href="#" class="hover:underline">Premium</a></li>
+            <li><a href="#" class="hover:underline">Profile</a></li>
+            <li><a href="#" class="hover:underline">More</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ----------------------------- -->
+    <!-- Main column -->
+    <!-- ----------------------------- -->
+    <div class="flex-1 flex flex-col">
+      <slot />
+    </div>
+
+    <!-- ----------------------------- -->
+    <!-- Right sidebar -->
+    <!-- ----------------------------- -->
+    <aside class="hidden 2xl:block w-90 shrink-0 overflow-y-auto pb-8">
+      <!-- ----------------------------- -->
+      <!-- Search -->
+      <!-- ----------------------------- -->
+      <input
+        type="text"
+        placeholder="#Search an idea or pixel"
+        class="border-b border-pixl-light/10 w-full py-1"
+      />
+
+      <div class="border border-pixl-light/10 p-4 mt-12">
+        <h2 class="text-pixl-light/50">Artists to follow</h2>
+        <ol class="flex flex-col gap-4 mt-6">
+          {
+            [
+              { name: 'alessia_draws', image: 'alessia.png' },
+              { name: 'just_Anne', image: 'anne.png' },
+              { name: 'Mr. Anderson', image: 'mr-anderson.png' },
+              { name: 'Michael', image: 'michael.png' },
+            ].map((item) => (
+              <li class="flex items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                  <img class="shrink-0 size-8" src={`/images/${item.image}`} alt="" />
+                  <p class="truncate">{item.name}</p>
+                </div>
+                <button class="justify-self-end border-pixl-highlight/50 border px-4 py-2 shrink-0 text-pixl-highlight grid place-items-center leading-none text-sm hover:bg-pixl-highlight/10">
+                  Follow
+                </button>
+              </li>
+            ))
+          }
+        </ol>
+        <button class="text-pixl-light/50 mt-6 hover:text-pixl-light/75">Show More</button>
+      </div>
+
+      <div class="mt-4 border border-pixl-light/10 p-4">
+        <h2 class="text-pixl-light/50">Follow Idea Streams</h2>
+        <ol class="flex flex-col gap-4 mt-6">
+          {
+            [
+              'Breakfast ideas and why not a long title here?',
+              'Some other idea stream',
+              'Another idea stream',
+              'Some other idea stream',
+              'Another idea stream',
+              'Some other idea stream',
+            ].map((item) => (
+              <li class="flex items-center justify-between gap-4">
+                <p class="truncate">{item}</p>
+                <button class="border-pixl-highlight/50 hover:bg-pixl-highlight/10 border size-7 shrink-0 text-pixl-highlight text-xl grid place-items-center leading-none">
+                  +
+                </button>
+              </li>
+            ))
+          }
+        </ol>
+        <button class="text-pixl-light/50 mt-6 hover:text-pixl-light/75">Show More</button>
+      </div>
+    </aside>
+    <script type="module" src="./src/entry.js"></script>
+  </body>
+</html>
