@@ -1,6 +1,7 @@
 ---
 import AppLayout from '../layouts/AppLayout.astro'
 import FeedItem from '../components/FeedItem.astro'
+import ThatsAllFolks from '../components/ThatsAllFolks.astro'
 ---
 
 <AppLayout>
@@ -26,10 +27,10 @@ import FeedItem from '../components/FeedItem.astro'
     <header>
       <img src="/images/cover.png" alt="" />
       <div
-        class="flex flex-col min-[400px]:flex-row gap-4 items-start min-[400px]:items-end -mt-12 md:-mt-16 lg:-mt-24 justify-between"
+        class="flex flex-col min-[400px]:flex-row gap-4 items-start min-[400px]:items-end -mt-12 md:-mt-16 xl:-mt-24 justify-between"
       >
         <div class="flex gap-4 items-end">
-          <img src="/images/adrian.png" class="size-24 md:size-32 lg:size-48 object-cover" alt="" />
+          <img src="/images/adrian.png" class="size-24 md:size-32 xl:size-48 object-cover" alt="" />
           <div>
             <h1>_adrian</h1>
             <p class="text-pixl-light/50">@tudsss</p>
@@ -133,5 +134,6 @@ import FeedItem from '../components/FeedItem.astro'
         <p>I love being here, anyone else feel the same?</p>
       </FeedItem>
     </ol>
+    <ThatsAllFolks />
   </main>
 </AppLayout>
