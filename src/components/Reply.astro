@@ -15,10 +15,10 @@ type Props = {
 const { name, handle, image, timeAgo, reposted, isLiked } = Astro.props as Props
 ---
 
-<li class="relative pt-8 group">
+<li class="relative pt-8 group/li">
   <!-- Line-through -->
   <div
-    class="absolute top-0 w-10 md:w-12 grid place-items-center h-full group-last:h-8"
+    class="absolute top-0 w-10 md:w-12 grid place-items-center h-full group-last/li:h-8"
     aria-hidden="true"
   >
     <div class="w-px h-full bg-pixl-light/10"></div>
