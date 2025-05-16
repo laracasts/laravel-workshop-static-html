@@ -1,6 +1,8 @@
 ---
 import AppLayout from '../layouts/AppLayout.astro'
 import FeedItem from '../components/FeedItem.astro'
+import Prompt from '../components/Prompt.astro'
+import ReplyPrompt from '../components/ReplyPrompt.astro'
 ---
 
 <AppLayout>
@@ -19,107 +21,7 @@ import FeedItem from '../components/FeedItem.astro'
   </nav>
 
   <main class="overflow-y-auto py-8 px-4">
-    <!-- ----------------------------- -->
-    <!-- Post prompt -->
-    <!-- ----------------------------- -->
-    <div class="flex flex-col min-[400px]:flex-row gap-4 items-start">
-      <a href="/profile">
-        <img src="/images/adrian.png" class="size-10 md:size-12 object-cover" alt="" />
-      </a>
-      <div class="flex-1">
-        <textarea
-          class="-m-2 p-2 min-h-24 text-lg w-full bg-pixl-dark text-pixl-highlight placeholder-pixl-light/50 field-sizing-content resize-none"
-          placeholder="What's up _adrian?"></textarea>
-        <!-- Action buttons -->
-        <div class="flex items-center justify-between">
-          <div class="flex gap-5">
-            <button>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19" fill="none">
-                <g fill="#EEE" clip-path="url(#a)">
-                  <path
-                    d="M1.91 1.579H.332v1.577H1.91V1.58ZM3.486 0H1.908v1.578h1.578V0Zm1.578 0H3.486v1.578h1.578V0Zm1.58 0H5.066v1.578h1.578V0Zm1.578 0H6.645v1.578h1.577V0Z"
-                  ></path>
-                  <path d="M9.798 0H8.221v1.578h1.577V0Zm1.579 0H9.799v1.578h1.578V0Z"></path>
-                  <path d="M12.95 0h-1.577v1.578h1.578V0Zm1.585 0h-1.578v1.578h1.578V0Z"></path>
-                  <path d="M16.111 0h-1.578v1.578h1.578V0Z"></path>
-                  <path
-                    d="M17.69 0h-1.58v1.578h1.578V0ZM3.486 12.623H1.908v1.578h1.578v-1.578Zm1.578-1.578H3.486v1.578h1.578v-1.578Zm1.58-1.578H5.066v1.578h1.578V9.467Zm1.578 1.578H6.645v1.578h1.577v-1.578Zm1.576 1.578H8.221v1.578h1.577v-1.578Zm1.579-1.578H9.799v1.578h1.578v-1.578Zm1.573-1.578h-1.577v1.578h1.578V9.467Zm1.585-1.577h-1.578v1.577h1.578V7.889Zm1.576-1.579h-1.578v1.578h1.578V6.31ZM17.69 7.89h-1.58v1.577h1.578V7.889Zm1.573 1.577h-1.578v1.578h1.578V9.467Zm1.578 1.578h-1.577v1.578h1.577v-1.578Zm1.583 1.578h-1.578v1.578h1.578v-1.578Z"
-                  ></path>
-                  <path
-                    d="M19.263 0h-1.578v1.578h1.578V0Zm1.578 0h-1.577v1.578h1.577V0Zm1.583 0h-1.578v1.578h1.578V0ZM1.91 3.157H.332v1.578H1.91V3.157Zm0 1.578H.332v1.578H1.91V4.735Z"
-                  ></path>
-                  <path
-                    d="M1.91 6.311H.332v1.578H1.91V6.31Zm0 1.579H.332v1.577H1.91V7.889Zm0 1.577H.332v1.578H1.91V9.467Zm0 1.578H.332v1.578H1.91v-1.578Zm0 1.578H.332v1.578H1.91v-1.578Z"
-                  ></path>
-                  <path
-                    d="M1.91 14.2H.332v1.578H1.91V14.2Zm0 1.579H.332v1.577H1.91V15.78Zm22.092-14.2h-1.578v1.577h1.578V1.58Zm0 1.578h-1.578v1.578h1.578V3.157Zm0 1.578h-1.578v1.578h1.578V4.735Z"
-                  ></path>
-                  <path
-                    d="M24.002 6.311h-1.578v1.578h1.578V6.31Zm0 1.579h-1.578v1.577h1.578V7.889Zm0 1.577h-1.578v1.578h1.578V9.467Zm0 1.578h-1.578v1.578h1.578v-1.578Zm0 1.578h-1.578v1.578h1.578v-1.578Z"
-                  ></path>
-                  <path
-                    d="M24.002 14.2h-1.578v1.578h1.578V14.2Zm0 1.578h-1.578v1.578h1.578v-1.578ZM3.486 17.356H1.908v1.578h1.578v-1.578Zm1.578 0H3.486v1.578h1.578v-1.578Zm1.58.001H5.066v1.578h1.578v-1.578Zm1.578 0H6.645v1.578h1.577v-1.578Z"
-                  ></path>
-                  <path
-                    d="M9.798 17.356H8.221v1.578h1.577v-1.578Zm1.579 0H9.799v1.578h1.578v-1.578Z"
-                  ></path>
-                  <path
-                    d="M12.95 17.356h-1.577v1.578h1.578v-1.578Zm1.585.001h-1.578v1.578h1.578v-1.578Z"
-                  ></path>
-                  <path d="M16.111 17.356h-1.578v1.578h1.578v-1.578Z"></path>
-                  <path d="M17.69 17.356h-1.58v1.578h1.578v-1.578Z"></path>
-                  <path
-                    d="M19.263 17.356h-1.578v1.578h1.578v-1.578Zm1.578 0h-1.577v1.578h1.577v-1.578Zm1.583 0h-1.578v1.578h1.578v-1.578ZM8.222 4.735H6.645v1.578h1.577V4.735Zm1.576-1.578H8.221v1.578h1.577V3.157Zm1.579 1.578H9.799v1.578h1.578V4.735Z"
-                  ></path>
-                  <path d="M9.798 6.311H8.221v1.578h1.577V6.31Z"></path>
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M.334 0h23.667v18.933H.334z"></path>
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
-            <button>
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="19" fill="none">
-                <g fill="#EEE" clip-path="url(#a)">
-                  <path
-                    d="M2.246 1.579H.668v1.577h1.578V1.58ZM3.824 0H2.246v1.578h1.578V0Zm1.578 0H3.824v1.578h1.578V0ZM6.98 0H5.402v1.578H6.98V0Zm1.576 0H6.98v1.578h1.577V0Zm1.578 0H8.557v1.578h1.577V0Zm1.579 0h-1.578v1.578h1.578V0Zm1.577 0h-1.577v1.578h1.578V0Z"
-                  ></path>
-                  <path
-                    d="M14.869 0H13.29v1.578h1.578V0Zm1.578 0h-1.578v1.578h1.578V0Zm1.578 0h-1.578v1.578h1.578V0Zm1.578 0h-1.578v1.578h1.578V0Z"
-                  ></path>
-                  <path
-                    d="M21.177 0H19.6v1.578h1.577V0Zm1.579 0h-1.578v1.578h1.578V0ZM2.246 3.156H.668v1.578h1.578V3.156Zm0 1.578H.668v1.578h1.578V4.734Zm0 1.578H.668V7.89h1.578V6.312Zm0 1.578H.668v1.578h1.578V7.89Z"
-                  ></path>
-                  <path d="M2.246 9.467H.668v1.578h1.578V9.467Zm0 1.578H.668v1.578h1.578v-1.578Z"
-                  ></path>
-                  <path
-                    d="M2.246 12.623H.668V14.2h1.578v-1.578Zm0 1.577H.668v1.578h1.578V14.2Zm0 1.579H.668v1.577h1.578V15.78Zm22.088-14.2h-1.578v1.577h1.578V1.58Zm0 1.577h-1.578v1.578h1.578V3.156Zm0 1.578h-1.578v1.578h1.578V4.734Zm0 1.578h-1.578v1.577h1.578V6.312Zm0 1.578h-1.578v1.577h1.578V7.89Zm0 1.577h-1.578v1.578h1.578V9.467Zm0 1.578h-1.578v1.578h1.578v-1.578Zm0 1.578h-1.578v1.578h1.578v-1.578Z"
-                  ></path>
-                  <path
-                    d="M24.334 14.2h-1.578v1.578h1.578V14.2Zm0 1.578h-1.578v1.578h1.578v-1.578Zm-20.51 1.578H2.246v1.578h1.578v-1.578Zm1.578 0H3.824v1.578h1.578v-1.578Zm1.578 0H5.402v1.578H6.98v-1.578Zm1.576 0H6.98v1.578h1.577v-1.578Zm1.578 0H8.557v1.578h1.577v-1.578Zm1.579 0h-1.578v1.578h1.578v-1.578Zm1.577 0h-1.577v1.578h1.578v-1.578Z"
-                  ></path>
-                  <path
-                    d="M14.869 17.356H13.29v1.578h1.578v-1.578Zm1.578 0h-1.578v1.578h1.578v-1.578Zm1.578 0h-1.578v1.578h1.578v-1.578Zm1.578 0h-1.578v1.578h1.578v-1.578Z"
-                  ></path>
-                  <path
-                    d="M21.177 17.356H19.6v1.578h1.577v-1.578Zm1.579 0h-1.578v1.578h1.578v-1.578Zm-11.043-14.2h-1.578v1.578h1.578V3.156Zm-1.579 1.578H8.557v1.578h1.577V4.734Zm0 1.578H8.557v1.577h1.577V6.312Zm0 1.578H8.557v1.577h1.577V7.89Zm0 1.577H8.557v1.578h1.577V9.467Zm0 1.578H8.557v1.578h1.577v-1.578Zm0 1.578H8.557v1.578h1.577v-1.578Zm1.579 1.577h-1.578v1.578h1.578V14.2Zm6.312-6.31h-1.578v1.577h1.578V7.89Zm0 1.577h-1.578v1.578h1.578V9.467Zm-1.578-3.155h-1.578v1.577h1.578V6.312Zm-1.578-1.578H13.29v1.578h1.578V4.734ZM13.29 3.156h-1.577v1.578h1.578V3.156Zm3.157 7.889h-1.578v1.578h1.578v-1.578Zm-1.578 1.578H13.29v1.578h1.578v-1.578Z"
-                  ></path>
-                  <path d="M13.29 14.2h-1.577v1.578h1.578V14.2Z"></path>
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M.666 0h23.667v18.933H.666z"></path>
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
-          </div>
-          <button class="bg-pixl-highlight text-sm text-pixl-dark px-4 py-1">Post</button>
-        </div>
-      </div>
-    </div>
+    <Prompt />
 
     <hr class="border-pixl-light/10 mt-3" />
 
@@ -129,6 +31,7 @@ import FeedItem from '../components/FeedItem.astro'
     <ol class="mt-4">
       <FeedItem name="Simon" handle="simonswiss" timeAgo="2h" image="simon-chilling.png">
         <p>Whoaaaa, this is pretty cool, seriously.</p>
+        <ReplyPrompt name="Adelle" />
       </FeedItem>
       <FeedItem name="Adelle" timeAgo="2h" image="adelle.png" handle="add-elle">
         <p>
