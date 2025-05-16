@@ -5,6 +5,8 @@ import CommentIcon from '../icons/CommentIcon.astro'
 import BookmarkIcon from '../icons/BookmarkIcon.astro'
 import ShareIcon from '../icons/ShareIcon.astro'
 import OptionsMenuButton from './OptionsMenuButton.astro'
+import Reply from './Reply.astro'
+import ReplyPrompt from './ReplyPrompt.astro'
 
 type Props = {
   name: string
@@ -13,19 +15,22 @@ type Props = {
   timeAgo: string
   reposted?: boolean
   isLiked?: boolean
+  hasReplies?: boolean
+  hasReplyPrompt?: boolean
 }
 
-const { name, image, handle, timeAgo, reposted, isLiked } = Astro.props as Props
+const { name, image, handle, timeAgo, reposted, isLiked, hasReplies, hasReplyPrompt } =
+  Astro.props as Props
 ---
 
-<li class="border-b border-pixl-light/10 py-8">
+<li class="pt-8">
   <div class="flex flex-col min-[400px]:flex-row gap-4 items-start">
     <a href="/profile" class="shrink-0">
-      <img src={`/images/${image}`} class="size-12 object-cover" alt="" />
+      <img src={`/images/${image}`} class="size-10 md:size-12 object-cover" alt="" />
     </a>
-    <div class="flex-1">
+    <div class={`flex-1 ${!hasReplies ? 'border-b border-pixl-light/10 pb-8' : ''}`}>
       <div class="flex flex-wrap gap-3 items-center justify-between">
-        <div class="flex flex-wrap gap-x-3 gap-y-2 items-start leading-none">
+        <div class="flex flex-wrap gap-x-3 items-center gap-y-2 leading-none">
           <h2>
             <a href="/profile" class="hover:underline">
               {name}
@@ -99,6 +104,24 @@ const { name, image, handle, timeAgo, reposted, isLiked } = Astro.props as Props
           </button>
         </div>
       </div>
+      <!-- -------------------- -->
+      <!-- Replies -->
+      <!-- -------------------- -->
+      {
+        hasReplies && (
+          <ul class="relative mt-8 border-t border-pixl-light/10">
+            <Reply name="Simon" handle="simonswiss" timeAgo="45min" image="simon-chilling.png">
+              <p>Heh — that looks just like me :)</p>
+            </Reply>
+            <Reply name="Anne" handle="just_Anne" timeAgo="30min" image="anne.png">
+              <p>I was just going to say this!</p>
+            </Reply>
+          </ul>
+        )
+      }
+
+      <!-- Reply prompt -->
+      {hasReplyPrompt && <ReplyPrompt name={name} />}
     </div>
   </div>
 </li>

@@ -5,128 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PIXL</title>
   </head>
-  <body class="relative h-dvh overflow-clip bg-pixl-dark">
+  <body class="max-w-[1500px] mx-auto px-4 sm:px-8 h-dvh w-full bg-pixl-dark overflow-clip">
     <!-- Background image -->
-    <img
-      src="/images/Official-Login-BG.png"
-      alt=""
-      class="absolute inset-y-0 h-full w-auto opacity-30"
-    />
-    <div class="isolate grid grid-cols-2 gap-40 h-full items-center px-28">
-      <!-- Left panel -->
-      <div class="flex h-dvh flex-col justify-center">
-        <div class="flex items-baseline gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="182" height="61" fill="none">
-            <path fill="#EEE" d="M10.083 0H0v10.083h10.083V0Zm10.084 0H10.084v10.083h10.083V0Z" />
-            <path
-              fill="#EEE"
-              d="M30.25 0H20.165v10.083h10.083V0ZM10.083 10.083H0v10.084h10.083V10.083Zm30.25 0H30.25v10.084h10.083V10.083Zm-30.25 10.084H0V30.25h10.083V20.167Zm30.25 0H30.25V30.25h10.083V20.167ZM10.083 30.25H0v10.083h10.083V30.25Zm10.084 0H10.084v10.083h10.083V30.25Z"
-            />
-            <path
-              fill="#EEE"
-              d="M30.25 30.25H20.165v10.083h10.083V30.25ZM10.083 40.333H0v10.084h10.083V40.333Zm0 10.084H0V60.5h10.083V50.417ZM60.5 0H50.415v10.083h10.083V0Zm10.083 0H60.5v10.083h10.083V0Zm10.084 0H70.584v10.083h10.083V0ZM70.583 10.083H60.5v10.084h10.083V10.083Zm0 10.084H60.5V30.25h10.083V20.167Zm0 10.083H60.5v10.083h10.083V30.25Zm0 10.083H60.5v10.084h10.083V40.333Zm0 10.084H60.5V60.5h10.083V50.417ZM60.5 50.416H50.415V60.5h10.083V50.416Zm20.167 0H70.584V60.5h10.083V50.416Z"
-            />
-            <path
-              fill="#ECA749"
-              d="M100.833 0H90.75v10.083h10.083V0Zm0 10.083H90.75v10.084h10.083V10.083ZM131.083 0H121v10.083h10.083V0Zm0 10.083H121v10.084h10.083V10.083Zm-30.25 30.25H90.75v10.084h10.083V40.333Zm0 10.084H90.75V60.5h10.083V50.417Zm30.25-10.084H121v10.084h10.083V40.333Zm0 10.084H121V60.5h10.083V50.417ZM110.917 30.25h-10.083v10.083h10.083V30.25Zm10.082-10.084h-10.083V30.25h10.083V20.166Z"
-            />
-            <path
-              fill="#ECA749"
-              d="M110.917 20.166h-10.083V30.25h10.083V20.166Zm10.082 10.084h-10.083v10.083h10.083V30.25Z"
-            />
-            <path
-              fill="#EEE"
-              d="M151.249 0h-10.083v10.083h10.083V0Zm0 10.084h-10.083v10.083h10.083V10.083Z"
-            />
-            <path
-              fill="#EEE"
-              d="M151.249 20.166h-10.083V30.25h10.083V20.166Zm0 10.084h-10.083v10.083h10.083V30.25Zm0 10.084h-10.083v10.083h10.083V40.333Z"
-            />
-            <path
-              fill="#EEE"
-              d="M151.249 50.416h-10.083V60.5h10.083V50.416Zm10.084.001H151.25V60.5h10.083V50.417Zm10.084-.001h-10.083V60.5h10.083V50.416Z"
-            />
-            <path fill="#EEE" d="M181.499 50.416h-10.083V60.5h10.083V50.416Z" />
-          </svg>
-          <div class="relative uppercase text-4xl text-pixl-highlight">
-            <div class="absolute left-0 bottom-full flex flex-col gap-3 mb-3 opacity-20">
-              <div class="flex flex-col gap-3 opacity-50">
-                <p>Coder</p>
-                <p>Art</p>
-                <p>Writer</p>
+    <div class="absolute inset-0 overflow-clip">
+      <img
+        src="/images/Official-Login-BG.png"
+        alt=""
+        class="absolute inset-y-0 right-0 left-[15%] h-full w-full object-cover opacity-30 mask-l-from-80%"
+      />
+    </div>
+    <!-- Main -->
+    <main class="grid h-full place-items-center">
+      <div
+        class="w-full relative flex flex-col lg:flex-row justify-between gap-16 lg:h-full items-center"
+      >
+        <!-- Left panel -->
+        <div class="flex lg:h-dvh flex-col justify-center">
+          <div class="flex items-baseline gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="182" height="61" fill="none">
+              <path
+                fill="#EEE"
+                d="M10.083 0H0v10.083h10.083V0Zm10.084 0H10.084v10.083h10.083V0Z"
+              ></path>
+              <path
+                fill="#EEE"
+                d="M30.25 0H20.165v10.083h10.083V0ZM10.083 10.083H0v10.084h10.083V10.083Zm30.25 0H30.25v10.084h10.083V10.083Zm-30.25 10.084H0V30.25h10.083V20.167Zm30.25 0H30.25V30.25h10.083V20.167ZM10.083 30.25H0v10.083h10.083V30.25Zm10.084 0H10.084v10.083h10.083V30.25Z"
+              ></path>
+              <path
+                fill="#EEE"
+                d="M30.25 30.25H20.165v10.083h10.083V30.25ZM10.083 40.333H0v10.084h10.083V40.333Zm0 10.084H0V60.5h10.083V50.417ZM60.5 0H50.415v10.083h10.083V0Zm10.083 0H60.5v10.083h10.083V0Zm10.084 0H70.584v10.083h10.083V0ZM70.583 10.083H60.5v10.084h10.083V10.083Zm0 10.084H60.5V30.25h10.083V20.167Zm0 10.083H60.5v10.083h10.083V30.25Zm0 10.083H60.5v10.084h10.083V40.333Zm0 10.084H60.5V60.5h10.083V50.417ZM60.5 50.416H50.415V60.5h10.083V50.416Zm20.167 0H70.584V60.5h10.083V50.416Z"
+              ></path>
+              <path
+                fill="#ECA749"
+                d="M100.833 0H90.75v10.083h10.083V0Zm0 10.083H90.75v10.084h10.083V10.083ZM131.083 0H121v10.083h10.083V0Zm0 10.083H121v10.084h10.083V10.083Zm-30.25 30.25H90.75v10.084h10.083V40.333Zm0 10.084H90.75V60.5h10.083V50.417Zm30.25-10.084H121v10.084h10.083V40.333Zm0 10.084H121V60.5h10.083V50.417ZM110.917 30.25h-10.083v10.083h10.083V30.25Zm10.082-10.084h-10.083V30.25h10.083V20.166Z"
+              ></path>
+              <path
+                fill="#ECA749"
+                d="M110.917 20.166h-10.083V30.25h10.083V20.166Zm10.082 10.084h-10.083v10.083h10.083V30.25Z"
+              ></path>
+              <path
+                fill="#EEE"
+                d="M151.249 0h-10.083v10.083h10.083V0Zm0 10.084h-10.083v10.083h10.083V10.083Z"
+              ></path>
+              <path
+                fill="#EEE"
+                d="M151.249 20.166h-10.083V30.25h10.083V20.166Zm0 10.084h-10.083v10.083h10.083V30.25Zm0 10.084h-10.083v10.083h10.083V40.333Z"
+              ></path>
+              <path
+                fill="#EEE"
+                d="M151.249 50.416h-10.083V60.5h10.083V50.416Zm10.084.001H151.25V60.5h10.083V50.417Zm10.084-.001h-10.083V60.5h10.083V50.416Z"
+              ></path>
+              <path fill="#EEE" d="M181.499 50.416h-10.083V60.5h10.083V50.416Z"></path>
+            </svg>
+            <!-- Word spread -->
+            <div class="hidden lg:block relative uppercase text-4xl text-pixl-highlight">
+              <div class="absolute left-0 bottom-full flex flex-col gap-3 mb-3 opacity-20">
+                <div class="flex flex-col gap-3 opacity-50">
+                  <p>Coder</p>
+                  <p>Art</p>
+                  <p>Writer</p>
+                  <p>Media</p>
+                  <p>Designer</p>
+                  <p>Coder</p>
+                  <p>Designer</p>
+                  <p>Art</p>
+                  <p>Writer</p>
+                  <p>Coder</p>
+                  <p>Art</p>
+                  <p>Coder</p>
+                  <p>Art</p>
+                  <p>Writer</p>
+                </div>
                 <p>Media</p>
-                <p>Designer</p>
-                <p>Coder</p>
-                <p>Designer</p>
-                <p>Art</p>
-                <p>Writer</p>
-                <p>Coder</p>
-                <p>Art</p>
-                <p>Coder</p>
-                <p>Art</p>
-                <p>Writer</p>
               </div>
-              <p>Media</p>
-            </div>
-            <p class="text-pixl-highlight">Everyone</p>
-            <div class="absolute left-0 top-full flex flex-col gap-3 mt-3 opacity-20">
-              <p>Coder</p>
-              <p>Art</p>
-              <div class="flex flex-col gap-3 opacity-50">
-                <p>Writer</p>
-                <p>Media</p>
-                <p>Designer</p>
-                <p>Coder</p>
-                <p>Designer</p>
-                <p>Art</p>
-                <p>Writer</p>
+              <p class="text-pixl-highlight">Everyone</p>
+              <div class="absolute left-0 top-full flex flex-col gap-3 mt-3 opacity-20">
                 <p>Coder</p>
                 <p>Art</p>
-                <p>Writer</p>
-                <p>Media</p>
-                <p>Designer</p>
-                <p>Coder</p>
-                <p>Designer</p>
-                <p>Art</p>
-                <p>Writer</p>
+                <div class="flex flex-col gap-3 opacity-50">
+                  <p>Writer</p>
+                  <p>Media</p>
+                  <p>Designer</p>
+                  <p>Coder</p>
+                  <p>Designer</p>
+                  <p>Art</p>
+                  <p>Writer</p>
+                  <p>Coder</p>
+                  <p>Art</p>
+                  <p>Writer</p>
+                  <p>Media</p>
+                  <p>Designer</p>
+                  <p>Coder</p>
+                  <p>Designer</p>
+                  <p>Art</p>
+                  <p>Writer</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Right Panel -->
-      <div class="pb-16">
-        <h1 class="text-pixl-highlight text-4xl">A place for the cool squares.</h1>
-        <div class="flex flex-col gap-3 mt-16 w-72 xl:w-96 text-center">
-          <a
-            class="bg-pixl-dark/50 hover:bg-pixl-dark/75 text-pixl-highlight px-4 py-1 text-shadow-xs border-pixl-highlight border text-lg xl:text-2xl"
-            href="/feed"
-            >Sign in with Google</a
+        <!-- Right Panel -->
+        <div class="pb-16 sm:w-120 max-w-full">
+          <h1
+            class="text-pixl-highlight text-3xl sm:text-4xl md:text-5xl leading-snug text-center lg:text-left"
           >
-          <a
-            href="/feed"
-            class="bg-pixl-dark/50 hover:bg-pixl-dark/75 text-pixl-highlight px-4 py-1 text-shadow-xs border-pixl-highlight border text-lg xl:text-2xl"
-            >Sign in with Apple</a
-          >
-          <p class="text-pixl-highlight text-shadow-xs text-lg xl:text-2xl">or</p>
-          <a
-            href="/feed"
-            class="bg-pixl-highlight hover:bg-pixl-highlight/75 text-pixl-dark px-4 py-1 text-shadow-xs border-pixl-highlight border text-lg xl:text-2xl"
-            >Create an Account</a
-          >
-          <div class="xl:mt-32 mt-16 flex flex-col gap-3">
-            <p class="text-pixl-light text-lg xl:text-2xl text-left">Already have an account?</p>
+            A place for the cool squares.
+          </h1>
+          <div class="flex flex-col gap-3 mt-16 mx-auto lg:ml-0 lg:w-96 text-center">
+            <a
+              class="bg-pixl-dark/50 hover:bg-pixl-dark/75 text-pixl-highlight px-4 py-1.5 text-shadow-xs border-pixl-highlight border text-xl md:text-2xl lg:text-xl xl:text-2xl"
+              href="/feed"
+              >Sign in with Google</a
+            >
             <a
               href="/feed"
-              class="bg-pixl-highlight hover:bg-pixl-highlight/75 text-pixl-dark px-4 py-1 text-shadow-xs border-pixl-highlight border text-lg xl:text-2xl"
-              >Sign In</a
+              class="bg-pixl-dark/50 hover:bg-pixl-dark/75 text-pixl-highlight px-4 py-1.5 text-shadow-xs border-pixl-highlight border text-xl md:text-2xl lg:text-xl xl:text-2xl"
+              >Sign in with Apple</a
             >
+            <p
+              class="text-pixl-highlight text-shadow-xs text-xl md:text-2xl lg:text-xl xl:text-2xl"
+            >
+              or
+            </p>
+            <a
+              href="/feed"
+              class="bg-pixl-highlight hover:bg-pixl-highlight/75 text-pixl-dark px-4 py-1.5 text-shadow-xs border-pixl-highlight border text-xl md:text-2xl lg:text-xl xl:text-2xl"
+              >Create an Account</a
+            >
+            <div class="xl:mt-32 mt-16 flex flex-col gap-3">
+              <p class="text-pixl-light text-xl md:text-2xl lg:text-xl xl:text-2xl lg:text-left">
+                Already have an account?
+              </p>
+              <a
+                href="/feed"
+                class="bg-pixl-highlight hover:bg-pixl-highlight/75 text-pixl-dark px-4 py-1.5 text-shadow-xs border-pixl-highlight border text-xl md:text-2xl lg:text-xl xl:text-2xl"
+                >Sign In</a
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </main>
     <footer class="fixed bottom-0 inset-x-0 pb-3">
       <div class="mx-auto text-center text-pixl-highlight p-4">
         <p>All rights reserved. Pixl Media For Everyone*</p>
@@ -137,16 +156,18 @@
         class="absolute inset-x-0 bottom-0 h-4 bg-[url(/images/white-noise.gif)] opacity-75"
       ></div>
       <!-- Icon -->
-      <div class="absolute right-4 bottom-8 grayscale">
+      <div class="hidden sm:block absolute right-4 bottom-8 grayscale">
         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="43" fill="none">
           <g fill="#ECA749" opacity=".5" style="mix-blend-mode: luminosity">
             <path
               d="M7.058 0H0v7.058h7.058V0Zm0 7.058H0v7.059h7.058V7.058ZM28.234 0h-7.058v7.058h7.058V0Zm0 7.059h-7.058v7.058h7.058V7.059ZM7.058 28.233H0v7.059h7.058v-7.059Z"
-            />
-            <path d="M7.058 35.291H0v7.059h7.058v-7.06Zm21.176-7.058h-7.058v7.059h7.058v-7.059Z" />
+            ></path>
+            <path
+              d="M7.058 35.291H0v7.059h7.058v-7.06Zm21.176-7.058h-7.058v7.059h7.058v-7.059Z"
+            ></path>
             <path
               d="M28.234 35.291h-7.058v7.059h7.058v-7.06ZM14.117 21.175H7.059v7.058h7.058v-7.058Zm7.058-7.058h-7.058v7.058h7.058v-7.058Zm-7.058 0H7.059v7.058h7.058v-7.059Zm7.058 7.058h-7.058v7.058h7.058v-7.058Z"
-            />
+            ></path>
           </g>
         </svg>
       </div>
