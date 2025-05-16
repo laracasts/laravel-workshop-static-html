@@ -29,9 +29,14 @@ import ReplyPrompt from '../components/ReplyPrompt.astro'
     <!-- Feed -->
     <!-- ----------------------------- -->
     <ol class="mt-4">
-      <FeedItem name="Simon" handle="simonswiss" timeAgo="2h" image="simon-chilling.png">
+      <FeedItem
+        name="Simon"
+        handle="simonswiss"
+        timeAgo="2h"
+        image="simon-chilling.png"
+        hasReplyPrompt
+      >
         <p>Whoaaaa, this is pretty cool, seriously.</p>
-        <ReplyPrompt name="Adelle" />
       </FeedItem>
       <FeedItem name="Adelle" timeAgo="2h" image="adelle.png" handle="add-elle">
         <p>

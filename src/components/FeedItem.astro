@@ -6,6 +6,7 @@ import BookmarkIcon from '../icons/BookmarkIcon.astro'
 import ShareIcon from '../icons/ShareIcon.astro'
 import OptionsMenuButton from './OptionsMenuButton.astro'
 import Reply from './Reply.astro'
+import ReplyPrompt from './ReplyPrompt.astro'
 
 type Props = {
   name: string
@@ -15,9 +16,11 @@ type Props = {
   reposted?: boolean
   isLiked?: boolean
   hasReplies?: boolean
+  hasReplyPrompt?: boolean
 }
 
-const { name, image, handle, timeAgo, reposted, isLiked, hasReplies } = Astro.props as Props
+const { name, image, handle, timeAgo, reposted, isLiked, hasReplies, hasReplyPrompt } =
+  Astro.props as Props
 ---
 
 <li class="pt-8">
@@ -116,6 +119,9 @@ const { name, image, handle, timeAgo, reposted, isLiked, hasReplies } = Astro.pr
           </ul>
         )
       }
+
+      <!-- Reply prompt -->
+      {hasReplyPrompt && <ReplyPrompt name={name} />}
     </div>
   </div>
 </li>
