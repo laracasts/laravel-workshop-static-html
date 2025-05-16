@@ -21,7 +21,7 @@ const { name, image, handle, timeAgo, reposted, isLiked } = Astro.props as Props
 <li class="border-b border-pixl-light/10 py-8">
   <div class="flex flex-col min-[400px]:flex-row gap-4 items-start">
     <a href="/profile" class="shrink-0">
-      <img src={`/images/${image}`} class="size-12 object-cover" alt="" />
+      <img src={`/images/${image}`} class="size-10 md:size-12 object-cover" alt="" />
     </a>
     <div class="flex-1">
       <div class="flex flex-wrap gap-3 items-center justify-between">
