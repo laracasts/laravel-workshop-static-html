@@ -1,0 +1,74 @@
+---
+import CommentIcon from '../icons/CommentIcon.astro'
+import HeartIcon from '../icons/HeartIcon.astro'
+import RepostIcon from '../icons/RepostIcon.astro'
+
+type Props = {
+  name: string
+  image: string
+  handle: string
+  timeAgo: string
+  reposted?: boolean
+  isLiked?: boolean
+}
+
+const { name, handle, image, timeAgo, reposted, isLiked } = Astro.props as Props
+---
+
+<li class="relative pt-8 group">
+  <!-- Line-through -->
+  <div
+    class="absolute top-0 w-10 md:w-12 grid place-items-center h-full group-last:h-8"
+    aria-hidden="true"
+  >
+    <div class="w-px h-full bg-pixl-light/10"></div>
+  </div>
+
+  <div class="flex flex-col min-[400px]:flex-row gap-4 items-start">
+    <a href="/profile" class="shrink-0">
+      <img src={`/images/${image}`} class="size-10 md:size-12 object-cover" alt="" />
+    </a>
+    <div class="flex-1 border-b border-pixl-light/10 pb-8">
+      <div class="flex flex-wrap gap-3 items-center justify-between">
+        <div class="flex flex-wrap gap-x-3 items-center gap-y-2 leading-none">
+          <h2><a href="/profile" class="hover:underline">{name}</a></h2>
+          <p class="text-xs text-pixl-light/50">{timeAgo}</p>
+          <a href="/profile" class="text-sm text-pixl-light/50 hover:text-pixl-light/75"
+            >@{handle}</a
+          >
+        </div>
+      </div>
+      <div class="text-sm mt-4 flex flex-col gap-3">
+        <slot />
+      </div>
+      <!-- Action buttons -->
+      <div class="mt-6 flex flex-wrap items-center justify-between gap-x-8 gap-y-2">
+        <div class="flex gap-6">
+          <!-- Likes -->
+          <div class={`flex gap-2 items-center ${isLiked ? 'text-pixl-highlight' : ''}`}>
+            <button class="group text-shadow-pixl-light hover:text-pixl-highlight">
+              <HeartIcon isLiked={isLiked} />
+            </button>
+            <span>23</span>
+          </div>
+
+          <!-- Comments -->
+          <div class="flex gap-2 items-center">
+            <button class="group text-shadow-pixl-light hover:text-pixl-highlight">
+              <CommentIcon />
+            </button>
+            <span>23</span>
+          </div>
+
+          <!-- Reposts -->
+          <div class="flex gap-2 items-center">
+            <button class="group text-shadow-pixl-light hover:text-pixl-highlight">
+              <RepostIcon />
+            </button>
+            <span>23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
