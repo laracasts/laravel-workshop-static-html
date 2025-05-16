@@ -4,10 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
     "astro": "astro dev",
-    "astro:build": "astro build",
+    "build": "astro build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
