@@ -1,8 +1,4 @@
----
-import '../styles.css'
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,7 +23,9 @@ import '../styles.css'
         <div class="flex lg:h-dvh flex-col justify-center">
           <div class="flex items-baseline gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="182" height="61" fill="none">
-              <path fill="#EEE" d="M10.083 0H0v10.083h10.083V0Zm10.084 0H10.084v10.083h10.083V0Z"
+              <path
+                fill="#EEE"
+                d="M10.083 0H0v10.083h10.083V0Zm10.084 0H10.084v10.083h10.083V0Z"
               ></path>
               <path
                 fill="#EEE"
@@ -106,7 +104,6 @@ import '../styles.css'
             </div>
           </div>
         </div>
-
         <!-- Right Panel -->
         <div class="pb-16 sm:w-120 max-w-full">
           <h1
@@ -117,7 +114,8 @@ import '../styles.css'
           <div class="flex flex-col gap-3 mt-16 mx-auto lg:ml-0 lg:w-96 text-center">
             <a
               class="bg-pixl-dark/50 hover:bg-pixl-dark/75 text-pixl-highlight px-4 py-1.5 text-shadow-xs border-pixl-highlight border text-xl md:text-2xl lg:text-xl xl:text-2xl"
-              href="/feed">Sign in with Google</a
+              href="/feed"
+              >Sign in with Google</a
             >
             <a
               href="/feed"
@@ -148,15 +146,15 @@ import '../styles.css'
         </div>
       </div>
     </main>
-
     <footer class="fixed bottom-0 inset-x-0 pb-3">
       <div class="mx-auto text-center text-pixl-highlight p-4">
         <p>All rights reserved. Pixl Media For Everyone*</p>
         <p class="text-xs mt-1.5 opacity-50">*except for badgers, they’re $&@*holes.</p>
       </div>
       <!-- White noise -->
-      <div class="absolute inset-x-0 bottom-0 h-4 bg-[url(/images/white-noise.gif)] opacity-75">
-      </div>
+      <div
+        class="absolute inset-x-0 bottom-0 h-4 bg-[url(/images/white-noise.gif)] opacity-75"
+      ></div>
       <!-- Icon -->
       <div class="hidden sm:block absolute right-4 bottom-8 grayscale">
         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="43" fill="none">
@@ -164,7 +162,8 @@ import '../styles.css'
             <path
               d="M7.058 0H0v7.058h7.058V0Zm0 7.058H0v7.059h7.058V7.058ZM28.234 0h-7.058v7.058h7.058V0Zm0 7.059h-7.058v7.058h7.058V7.059ZM7.058 28.233H0v7.059h7.058v-7.059Z"
             ></path>
-            <path d="M7.058 35.291H0v7.059h7.058v-7.06Zm21.176-7.058h-7.058v7.059h7.058v-7.059Z"
+            <path
+              d="M7.058 35.291H0v7.059h7.058v-7.06Zm21.176-7.058h-7.058v7.059h7.058v-7.059Z"
             ></path>
             <path
               d="M28.234 35.291h-7.058v7.059h7.058v-7.06ZM14.117 21.175H7.059v7.058h7.058v-7.058Zm7.058-7.058h-7.058v7.058h7.058v-7.058Zm-7.058 0H7.059v7.058h7.058v-7.059Zm7.058 7.058h-7.058v7.058h7.058v-7.058Z"
@@ -173,5 +172,6 @@ import '../styles.css'
         </svg>
       </div>
     </footer>
+    <script type="module" src="./src/entry.js"></script>
   </body>
 </html>

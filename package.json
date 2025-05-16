@@ -4,9 +4,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "dev": "vite dev",
+    "build": "vite build",
+    "astro": "astro dev",
+    "astro:build": "astro build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
